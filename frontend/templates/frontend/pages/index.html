@@ -71,26 +71,30 @@
         opacity: 1;
         visibility: visible;
       }
-
-      .btn-outline-primary {
-        color: #84E7D5!important;
-        border-color: #84E7D5!important;
+      
+      .main-btn-fill {
+        background: #00aa83;
+        color: #fff;
       }
-
+      .nav .btn-outline-primary {
+        color: #84e7d5 !important;
+        border-color: #84e7d5 !important;
+      }
+      
       .hero-title {
-        font-family: system-ui!important;
-      font-weight: 700!important;
-      font-size: 4.5rem!important;
+        font-family: system-ui !important;
+        font-weight: 700 !important;
+        font-size: 4.5rem !important;
       }
-
+      
       .bg-dl {
-        background-color: #1f2326!important;
+        background-color: #1f2326 !important;
       }
-
+      
       .bg-black {
-        background: #131517!important;
+        background: #131517 !important;
       }
-
+      
       .page-loading-inner {
         position: absolute;
         top: 50%;
@@ -154,40 +158,40 @@
           transform: none;
         }
       }
-
+      
       .jarallax .jarallax-img {
-        opacity: 0.5!important;
+        opacity: 0.5 !important;
       }
-
+      
       .header-logo {
         width: 100%;
         max-width: 170px;
       }
-
+      
       .magical-gradient {
-     background: linear-gradient(to right, #e3eaff 0%, #84e8d6 50%, #95f1ff 100%);
-    -webkit-background-clip: text;
-    text-fill-color: transparent;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-    -o-text-fill-color: transparent;
-    clip-path: inset(0px);
-    color: transparent;
+        background: linear-gradient(to right, #e3eaff 0%, #84e8d6 50%, #95f1ff 100%);
+        -webkit-background-clip: text;
+        text-fill-color: transparent;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        -o-text-fill-color: transparent;
+        clip-path: inset(0px);
+        color: transparent;
       }
-
+      
       .magical-bg {
         background: linear-gradient(to right, #191940 0%, #50618f 50%, #191940 100%);
         background: -webkit-linear-gradient(to right, #191940 0%, #50618f 50%, #191940 100%);
       }
-
+      
       .round-icon-dark {
-        background-color: #1c2126!important;
+        background-color: #1c2126 !important;
       }
-
+      
       .navbar {
-        border-bottom: 1px solid #3a3c3e!important;
+        border-bottom: 1px solid #3a3c3e !important;
       }
-
+      
       .hero-cta-btn {
         font-size: 1.5rem !important;
         border-width: thin;
@@ -195,95 +199,147 @@
         border-style: solid;
         border-radius: 50px;
       }
-
+      
       #successModal {
         display: none;
       }
 
-@media all and (min-width: 992px) {
-  .concentric-circle {
-    background-image: url("{% static 'frontend/assets/img/decorations/concentric-02.png'%}");
-    background-position: center;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    position: relative;
-    width: 100%;
-    max-width: 250px;
-    height: 350px;
-    z-index: 99999;
-    margin: 0 auto;
-    opacity: 0.1;
-    
-   }
+      bar-nav .nav-link {
+        color: #fff !important;
+      }
+      
+      footer {
+        padding: 6rem 0rem !important;
+      }
+      footer h5,
+      footer a {
+        color: #fff !important;
+      }
+      
+      .footer-ul li a {
+        color: #fff !important;
+      }
+      
+      .navbar {
+        background-color: #090a0d;
+      }
+      
+      .modal-header {
+        padding: 1rem 0rem !important;
+      }
+      
+      .ds-gradient-two {
+        background: linear-gradient(to right, #e3eaff 0%, #98beff 50%, #95f1ff 100%);
+        -webkit-background-clip: text;
+        text-fill-color: transparent;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        -o-text-fill-color: transparent;
+        clip-path: inset(0px);
+        color: transparent;
+        font-weight: 700;
+      }
+      
+      .bg-sftgreen {
+        background-color: rgba(132, 231, 213, 0.1) !important;
+      }
+      
+      .btn-main {
+        background: transparent;
+        color: #fff;
+        border-color: #83e7d5;
+      }
+      
+      .cool-green {
+        color: rgb(132, 231, 213) !important;
+      }
+      
+      .modal-body {
+        max-width: 624px;
+        margin: 0 auto;
+        width: 100%;
+      }
+      .table thead th, .table tbody th {
+        color: #fff!important;
+      }
 
-   small {
-    font-size: 0.785rem!important;
-   }
-}
+      /************
+      * Media
+      *
+      */
+      
+      
+      @media all and (min-width: 769px) {
+        .mobile-md {
+          display: none;
+        }
+        .desktop-md {
+          display: block;
+        }
+      }
+      
+      @media all and (max-width: 768px) {
+        .mobile-md {
+          display: block;
+        }
+      
+        .desktop-md {
+          display: none;
+        }
+      }
+      
+      @media all and (min-width: 992px) {
+        .concentric-circle {
+          background-image: url("{% static 'frontend/assets/img/decorations/concentric-02.png'%}");
+          background-position: center;
+          background-size: 100%;
+          background-repeat: no-repeat;
+          position: relative;
+          width: 100%;
+          max-width: 250px;
+          height: 350px;
+          z-index: 99999;
+          margin: 0 auto;
+          opacity: 0.1;
+        }
+      
+        small {
+          font-size: 0.785rem !important;
+        }
+      }
 
-.main-btn-fill {
-  background: #00aa83;
-  color: #fff;
-}
-.navbar-nav .nav-link {
-  color: #fff!important;
-}
+      @media all and (max-width: 526px) {
 
-footer {
-  padding: 6rem 0rem!important;
-}
-footer h5, footer a, {
-  color: #fff!important;
-}
+        #PricingMobile {
+          display: none;
+        }
 
-.footer-ul li a{
-  color: #fff!important;
-}
+        #PricingDesktop {
+          display: block;
+        }
 
-.navbar {
-  background-color: #090A0D;
-}
+      }
 
-.modal-header {
- padding:  1rem 0rem!important;
-}
+      @media all and (max-width: 525px) {
+        .pricing-col-mobile {
+          padding: 6rem 0rem;
+          align-items: center;
+          width: 100%;
+        }
 
+        #PricingMobile {
+          display: block;
+        }
 
+        #PricingDesktop {
+          display: none;
+        }
 
-.ds-gradient-two {
-  background: linear-gradient(to right, #e3eaff 0%, #98beff 50%, #95f1ff 100%);
-  -webkit-background-clip: text;
-  text-fill-color: transparent;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-  -o-text-fill-color: transparent;
-  clip-path: inset(0px);
-  color: transparent;
-  font-weight: 700;
-}
-
-
-.bg-sftgreen{
-  background-color: rgba(132,231,213, 0.1)!important;
-}
-
-.btn-main {
-  background: transparent;
-  color: #fff;
-  border-color: #83e7d5;
-}
-
-.cool-green {
-  color: rgb(132,231,213)!important;
-}
-
-.modal-body {
-  max-width: 624px;
-  margin: 0 auto;
-  width: 100%;
-}
-
-    </style>
+        .build-col {
+          display: none!important;
+        }
+      }
+</style>
 
     <!-- Page loading scripts -->
     <script>
@@ -439,7 +495,8 @@ footer h5, footer a, {
                 <span class="fw-semibold lh-sm cool-green">Learn about our AI solutions for your business </span>
                 <i class="bi bi-arrow-right fs-lg ms-2 me-n1"></i>
               </a>
-              <h1 class="display-4 text-white pt-3 mt-3 mb-4 hero-title">We build you<br> <span class="magical-gradient">magical</span>  software.</h1>
+              <h1 class="display-4 text-white pt-3 mt-3 mb-4 hero-title desktop-md">We build you<br> <span class="magical-gradient">magical</span>  software.</h1>
+              <h1 class="display-4 text-white pt-3 mt-3 mb-4 hero-title mobile-md">We build you <span class="magical-gradient">magical</span> software.</h1>
               <p class="text-white opacity-70 fs-xl">Our expert team of data engineers, software engineers, and designers boasts impressive backgrounds from top Fortune 500 companies, ready to deliver exceptional solutions.</p>
             </div>
             <div class="button-container">
@@ -1082,13 +1139,35 @@ footer h5, footer a, {
         </div>
       </section> {% endcomment %}
 
+  <section id="PricingMobile" class="position-relative bg-dark pt-2 pt-lg-4 pt-xl-5">
+      <div class="container position-relative z-2 pt-5" data-bs-theme="dark text-white">
+          <h2 class="h1 text-center pt-2 pt-sm-3 pb-4 pb-md-5 mb-2 mb-md-0 mb-lg-2 text-white">Pricing</h2>
+        <div class="row row-cols-1 align-items-center position-relative z-2 g-0">
+          <div class="col">&nbsp;</div>
+          <div class="col py-2 py-md-3">
+            <div class="text-center py-4 mx-auto text-white" style="width: 264px;">
+              <h3 class="h4 mb-sm-4 text-white">Visual Embassy</h3>
+              <a href="https://calendly.com/rickydottech/visual-embassy-intro-pricing-product-pipeline" target="_blank" class="btn  w-100 main-btn-fill rounded-pill mb-2 text-white">Get started - Free</a>
+              <p class="text-white fs-xs mb-0">Our pricing starts at as low as $1,299 per team</p>
+            </div>
+          </div>
+          <div class="position-relative w-100 opacity-40">
+            <span class="position-absolute top-0 start-0 w-100" style="height: 1px; background: linear-gradient(270deg, #121519 0%, rgba(11, 15, 25, 0) 54.17%, #121519 98.44%)"></span>
+            <span class="d-block w-100 bg-primary" style="height: 1px"></span>
+          </div>
+        </div>
+      </div>
+        <div class="d-none d-md-block" style="height: 300px"></div>
+        <div class="d-md-none" style="height: 260px"></div>
+   </section>
+
       <!-- Pricing / Comparison -->
-      <section class="position-relative bg-dark pt-2 pt-lg-4 pt-xl-5" style="background: linear-gradient(90deg, #121519 0%, #191c20 51.04%, #121519 100%)">
+      <section id="PricingDesktop" class="position-relative bg-dark pt-2 pt-lg-4 pt-xl-5" style="background: linear-gradient(90deg, #121519 0%, #191c20 51.04%, #121519 100%)">
         {% comment %} <div class="jarallax position-absolute top-0 start-0 w-100 h-100" data-jarallax data-speed="0.4">
           <div class="jarallax-img" style="background-image: url(assets/img/landing/saas-4/pricing-bg-pattern.png)"></div>
         </div> {% endcomment %}
         <div class="container position-relative z-2 pt-5" data-bs-theme="dark text-white">
-          <h2 class="h1 text-center pt-2 pt-sm-3 pb-4 pb-md-5 mb-2 mb-md-0 mb-lg-2 text-white">Visual Embassy vs Others</h2>
+          <h2 class="h1 text-center pt-2 pt-sm-3 pb-4 pb-md-5 mb-2 mb-md-0 mb-lg-2 text-white">Pricing</h2>
 
           <!-- Table visible on screens > 768px -->
           <div class="position-relative ms-n4 ms-md-0 d-none d-md-block">
@@ -1101,7 +1180,7 @@ footer h5, footer a, {
               <div class="col py-2 py-md-3">
                 <div class="text-center py-4 mx-auto text-white" style="width: 264px;">
                   <h3 class="h4 mb-sm-4 text-white">Visual Embassy</h3>
-                  <a href="https://calendly.com/rickydottech/visual-embassy-intro-pricing-product-pipeline" target="_blank" class="btn  w-100 main-btn-fill rounded-pill mb-2">Get started - Free</a>
+                  <a href="https://calendly.com/rickydottech/visual-embassy-intro-pricing-product-pipeline" target="_blank" class="btn  w-100 main-btn-fill rounded-pill mb-2 text-white">Get started - Free</a>
                   <p class="text-white fs-xs mb-0">Our pricing starts at as low as $1,299 per team</p>
                 </div>
               </div>
@@ -1173,7 +1252,7 @@ footer h5, footer a, {
               <div class="col py-3 py-md-4 pe-lg-5">
                 <div class="text-center py-1 px-4 mx-auto" style="width: 264px">
                   <div class="text-white fs-lg fw-semibold">Average 6-9 months</div>
-                  <div class="text-body fs-xs">depends on team qualification</div>
+                  <div class="text-white fs-xs">depends on team qualification</div>
                 </div>
               </div>
               <div class="position-relative w-100 opacity-40">
@@ -1190,13 +1269,13 @@ footer h5, footer a, {
               <div class="col py-3 py-md-4">
                 <div class="text-center py-1 px-4 mx-auto" style="width: 264px">
                   <div class="text-white fs-lg fw-semibold">Included</div>
-                  <div class="text-body fs-xs">with our premium plans</div>
+                  <div class="text-white fs-xs">with our premium plans</div>
                 </div>
               </div>
               <div class="col py-3 py-md-4 pe-lg-5">
                 <div class="text-center py-1 px-4 mx-auto" style="width: 264px">
                   <div class="text-white fs-lg fw-semibold">Average $20k</div>
-                  <div class="text-body fs-xs">per engineer per month</div>
+                  <div class="text-white fs-xs">per engineer per month</div>
                 </div>
               </div>
               <div class="position-relative w-100 opacity-40">
@@ -1210,13 +1289,13 @@ footer h5, footer a, {
           <table class="table table-layout-fixed d-md-none bg-dl">
             <thead>
               <tr>
-                <th scope="col" class="text-center">
-                  <div class="h5">Visual Embassy</div>
-                  <a href="#" class="btn btn-sm btn-primary w-100 rounded-pill mb-2">Get started - Free</a>
-                  <p class="text-body fs-xs mb-0">Our pricing starts at as low as $1,299 per team</p>
+                <th scope="col pricing-col-mobile" class="text-center">
+                  <div class="h5 text-white">Visual Embassy</div>
+                  <a href="#" class="btn btn-sm main-btn-fill w-100 rounded-pill mb-2">Get started - Free</a>
+                  <p class="text-white fs-xs mb-0">Our pricing starts at as low as $1,299 per team</p>
                 </th>
-                <th scope="col" class="align-middle text-center">
-                  <div class="h5 mb-0">Building In-House</div>
+                <th scope="col" class="align-middle text-center build-col">
+                  <div class="h5 mb-0 text-white">Building In-House</div>
                 </th>
               </tr>
             </thead>
@@ -1225,13 +1304,13 @@ footer h5, footer a, {
                 <th scope="row" colspan="2" class="bg-dl text-white text-center">Data Models Infrastructure Cost</th>
               </tr>
               <tr>
-                <td class="text-center">
+                <td class="text-center text-white">
                   <div class="text-white fw-semibold">Included</div>
-                  <div class="text-body fs-xs">Cloud hosted AI/ML capacities</div>
+                  <div class="text-white fs-xs">Cloud hosted AI/ML capacities</div>
                 </td>
                 <td class="text-center">
                   <div class="text-white fw-semibold">From $10k to $50k</div>
-                  <div class="text-body fs-xs">per month</div>
+                  <div class="text-white fs-xs">per month</div>
                 </td>
               </tr>
               <tr>
@@ -1240,11 +1319,11 @@ footer h5, footer a, {
               <tr>
                 <td class="text-center">
                   <div class="text-white fw-semibold">Included</div>
-                  <div class="text-body fs-xs">with our premium plans</div>
+                  <div class="text-white fs-xs">with our premium plans</div>
                 </td>
                 <td class="text-center">
                   <div class="text-white fw-semibold">From $10k to $30k</div>
-                  <div class="text-body fs-xs">per engineer per month</div>
+                  <div class="text-white fs-xs">per engineer per month</div>
                 </td>
               </tr>
               <tr>
@@ -1256,7 +1335,7 @@ footer h5, footer a, {
                 </td>
                 <td class="text-center">
                   <div class="text-white fw-semibold">Average 6-9 months</div>
-                  <div class="text-body fs-xs">depends on team qualification</div>
+                  <div class="text-white fs-xs">depends on team qualification</div>
                 </td>
               </tr>
               <tr>
@@ -1265,11 +1344,11 @@ footer h5, footer a, {
               <tr>
                 <td class="text-center">
                   <div class="text-white fw-semibold">Included</div>
-                  <div class="text-body fs-xs">with our premium plans</div>
+                  <div class="text-white fs-xs">with our premium plans</div>
                 </td>
                 <td class="text-center">
                   <div class="text-white fw-semibold">Average $5k</div>
-                  <div class="text-body fs-xs">per engineer per month</div>
+                  <div class="text-white fs-xs">per engineer per month</div>
                 </td>
               </tr>
             </tbody>
@@ -1489,7 +1568,7 @@ footer h5, footer a, {
         </div>
         <div class="text-sm-center pb-3 py-sm-3 py-md-4 py-xl-5">
           <p class="nav d-block fs-sm mb-0">
-            <span class="text-body">&copy; 2024 Visual Embassy, LLC. All rights reserved.</span>
+            <span class="text-white">&copy; 2024 Visual Embassy, LLC. All rights reserved.</span>
           </p>
         </div>
       </div>
