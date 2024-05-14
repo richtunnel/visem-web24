@@ -49,7 +49,7 @@ env = environ.Env(
 )
 
 ENVIRONMENT = env("ENVIRONMENT")
-DJANGO_SECRET_KEY = 'cox@vzisg5+ao$t53z^-^jx99_-*iciddbrdtwm5@fnl8$z6k'
+#DJANGO_SECRET_KEY = 'cox@vzisg5+ao$t53z^-^jx99_-*iciddbrdtwm5@fnl8$z6k'
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = Path(__file__).resolve().parent.parent
