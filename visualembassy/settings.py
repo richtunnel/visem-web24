@@ -33,7 +33,7 @@ env = environ.Env(
     DATABASE_PASSWORD=(str, ""),
     DATABASE_HOST=(str, "localhost"),
     DATABASE_PORT=(str, "5432"),
-    DEBUG=(bool, True),
+    DEBUG=(bool, False),
     DEFAULT_FROM_EMAIL=(
         str,
         "noreply@example.com",
@@ -49,6 +49,7 @@ env = environ.Env(
 )
 
 ENVIRONMENT = env("ENVIRONMENT")
+DJANGO_SECRET_KEY = env('DJANGO_SECRET_KEY')
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -58,7 +59,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'cox@vzisg5+ao$t53z^-^j)99_-6#iciddbrdtwm5@fnl8$z6k'
+SECRET_KEY = 'cox@vzisg5+ao$t53z^-^jx99_-*iciddbrdtwm5@fnl8$z6k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env("DEBUG")
@@ -163,8 +164,8 @@ USE_TZ = True
 
 APP_HOST = "http://localhost:8000"
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
-STATIC_URL = "static/"
-STATIC_ROOT = "static/"
+STATIC_URL = "/static/"
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static/client'),
 ]
