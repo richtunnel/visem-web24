@@ -92,6 +92,7 @@
   height: 100%;
   background-size: contain;
   background-position: bottom;
+  /* background-image: url("../../img/tesla-white-withshadow.png"); */
   background-repeat: no-repeat;
 }
 
