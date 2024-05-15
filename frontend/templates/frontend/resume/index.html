@@ -1,0 +1,227 @@
+{% extends 'frontend/resume/_base.html' %}
+{% load static %}
+{% block main %}
+<style>
+
+  @media all and (min-width: 1200px) {
+    .home-hero-image {
+      top: 0rem;
+    }
+
+    .polygon-shape {
+      clip-path: polygon(0 0, calc(100% - 50px) 0, 100% 50%, calc(100% - 50px) 100%, 0 100%);
+    }
+  }
+
+  @media all and (min-width: 576px) {
+  
+  }
+  @media (max-width: 991px) {
+    .center-text {
+      text-align: center;
+      position: relative;
+      z-index: 1; /* Ensure content is above overlay */
+  
+      /* Rest of your CSS for text color, etc. */
+    }
+  
+    .center-text::before {
+      z-index: 0; /* Place it below the content */
+    }
+
+    .desktop {
+      display: none;
+    }
+    
+    .mobile {
+      display: block;
+    }
+
+    .modal-header {
+      border-bottom: none!important;
+    }
+
+  }
+
+  @media (min-width: 992px) {
+    .desktop {
+      display: block;
+    }
+    
+    .mobile {
+      display: none;
+    } 
+  }
+
+  
+</style>
+
+<section class="mobile">
+  <div class="mobile-overlay"></div>
+  <div class="foggy-road">
+    <div class="hero-cta-div">
+      <a class="btn" data-bs-toggle="modal" data-bs-target="#SignUpNoticeModal">Tap to Start&nbsp;&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="6%" height="6%" fill="currentColor" class="bi bi-fingerprint icon-gradient" viewBox="0 0 16 16">
+      {% comment %} <a class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" href="{% url 'frontend:signup' %}">Tap to Start&nbsp;&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="6%" height="6%" fill="currentColor" class="bi bi-fingerprint icon-gradient" viewBox="0 0 16 16"> {% endcomment %}
+        <defs>
+          <linearGradient id="biFingerprintGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#7e8aff;stop-opacity:1" />
+            <stop offset="50%" style="stop-color:#00bef5;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#00ead1;stop-opacity:1" />
+          </linearGradient>
+        </defs>
+        <path fill="url(#biFingerprintGradient)" d="M8.06 6.5a.5.5 0 0 1 .5.5v.776a11.5 11.5 0 0 1-.552 3.519l-1.331 4.14a.5.5 0 0 1-.952-.305l1.33-4.141a10.5 10.5 0 0 0 .504-3.213V7a.5.5 0 0 1 .5-.5Z"/>
+        <path fill="url(#biFingerprintGradient)" d="M6.06 7a2 2 0 1 1 4 0 .5.5 0 1 1-1 0 1 1 0 1 0-2 0v.332c0 .409-.022.816-.066 1.221A.5.5 0 0 1 6 8.447c.04-.37.06-.742.06-1.115V7Zm3.509 1a.5.5 0 0 1 .487.513 11.5 11.5 0 0 1-.587 3.339l-1.266 3.8a.5.5 0 0 1-.949-.317l1.267-3.8a10.5 10.5 0 0 0 .535-3.048A.5.5 0 0 1 9.569 8Zm-3.356 2.115a.5.5 0 0 1 .33.626L5.24 14.939a.5.5 0 1 1-.955-.296l1.303-4.199a.5.5 0 0 1 .625-.329Z"/>
+        <path fill="url(#biFingerprintGradient)" d="M4.759 5.833A3.501 3.501 0 0 1 11.559 7a.5.5 0 0 1-1 0 2.5 2.5 0 0 0-4.857-.833.5.5 0 1 1-.943-.334Zm.3 1.67a.5.5 0 0 1 .449.546 10.72 10.72 0 0 1-.4 2.031l-1.222 4.072a.5.5 0 1 1-.958-.287L4.15 9.793a9.72 9.72 0 0 0 .363-1.842.5.5 0 0 1 .546-.449Zm6 .647a.5.5 0 0 1 .5.5c0 1.28-.213 2.552-.632 3.762l-1.09 3.145a.5.5 0 0 1-.944-.327l1.089-3.145c.382-1.105.578-2.266.578-3.435a.5.5 0 0 1 .5-.5Z"/>
+        <path fill="url(#biFingerprintGradient)" d="M3.902 4.222a4.996 4.996 0 0 1 5.202-2.113.5.5 0 0 1-.208.979 3.996 3.996 0 0 0-4.163 1.69.5.5 0 0 1-.831-.556Zm6.72-.955a.5.5 0 0 1 .705-.052A4.99 4.99 0 0 1 13.059 7v1.5a.5.5 0 1 1-1 0V7a3.99 3.99 0 0 0-1.386-3.028.5.5 0 0 1-.051-.705ZM3.68 5.842a.5.5 0 0 1 .422.568c-.029.192-.044.39-.044.59 0 .71-.1 1.417-.298 2.1l-1.14 3.923a.5.5 0 1 1-.96-.279L2.8 8.821A6.531 6.531 0 0 0 3.058 7c0-.25.019-.496.054-.736a.5.5 0 0 1 .568-.422Zm8.882 3.66a.5.5 0 0 1 .456.54c-.084 1-.298 1.986-.64 2.934l-.744 2.068a.5.5 0 0 1-.941-.338l.745-2.07a10.51 10.51 0 0 0 .584-2.678.5.5 0 0 1 .54-.456Z"/>
+        <path fill="url(#biFingerprintGradient)" d="M4.81 1.37A6.5 6.5 0 0 1 14.56 7a.5.5 0 1 1-1 0 5.5 5.5 0 0 0-8.25-4.765.5.5 0 0 1-.5-.865Zm-.89 1.257a.5.5 0 0 1 .04.706A5.478 5.478 0 0 0 2.56 7a.5.5 0 0 1-1 0c0-1.664.626-3.184 1.655-4.333a.5.5 0 0 1 .706-.04ZM1.915 8.02a.5.5 0 0 1 .346.616l-.779 2.767a.5.5 0 1 1-.962-.27l.778-2.767a.5.5 0 0 1 .617-.346Zm12.15.481a.5.5 0 0 1 .49.51c-.03 1.499-.161 3.025-.727 4.533l-.07.187a.5.5 0 0 1-.936-.351l.07-.187c.506-1.35.634-2.74.663-4.202a.5.5 0 0 1 .51-.49Z"/>
+      </svg></a>
+      <small class="text-muted">Won't affect your credit score¹</small>
+    </div><!--start-btn-->
+  </div>
+  <div class="d-lg-flex position-relative h-100 min-vh-100 center-text">
+    <div class="mobile-content-container">
+      {% comment %} <div id="lens"></div> {% endcomment %}
+      <div class="mobile-container-wrapper">
+        <div class="title-wrapper">
+          {% comment %} <hr class="hero-divider"> {% endcomment %}
+          <h1 class="mb-1">Lowest Rate Auto Loans</h1>
+          <h4 class="mb-0">for <span class="oversub-head">every</span> type of credit.</h4><br />
+          {% comment %} <small class="text-muted">Won't affect your credit score¹</small> {% endcomment %}
+          <p class="sub-title-02">Credit doesn't matter, you  matter.</p>
+          <hr class="hero-divider">
+       </div>
+       <div class="hero-sub-content"></div>
+       {% comment %} <div class="start-btn">
+        <div class="btn-dash"></div>
+        <a class="btn" style="width: 100%; height: 100%;" href="{% url 'frontend:signup' %}">Push to <br />Start</a>
+       </div>
+      </div><!--start-btn--> {% endcomment %}
+      {% comment %} <div class="mountain-clipart"></div> {% endcomment %}
+    </div><!--mobile-content-container-->
+    {% comment %} <div class="hero-cta-div">
+      <a class="btn" style="" href="{% url 'frontend:signup' %}">Push to Start&nbsp;&nbsp;<i class="bi custom-btn-icons-mobile bi-arrow-right-circle-fill"></i></a>
+      <small class="text-muted">Won't affect your credit score¹</small>
+    </div><!--start-btn--> {% endcomment %}
+
+    {% comment %} <div class="mobile-hero-overlay"></div> {% endcomment %}
+    <!-- Sign up form-->
+    {% comment %} <div class="d-flex flex-column align-items-center w-lg-50 min-vh-100 h-100 px-lg-5">
+      <div class="w-100 mt-auto" style="max-width: 526px;">
+        <h1 class="fw-light text-light display-1">Low APR auto loans, for <span class="text-warning fw-light">every type</span> of <span class="text-warning fw-light">credit</span>.</h1>
+        <p class="pb-3 mb-3 mb-lg-4 text-light">Get approved for the lowest rates on the market, based on your income.</p>
+        <a class="btn btn-outline-light btn-lg connect-accounts" style="border-radius: 50px;" href="{% url 'frontend:signup' %}">Get Started</a>
+      </div>
+      <!-- Copyright-->
+      <p class="w-100 fs-sm pt-5 mt-auto mb-5 text-light" style="max-width: 526px;"><i class="ai-lock-closed"></i> Won't affect your credit score¹</p>
+    </div> {% endcomment %}
+  </div>
+</div>
+  {% comment %} <div class="blur-section">
+    <div class="blur-section-container">
+      <p class="oversub-head">Credit score doesn't matter.</p>
+      <h1>Lowest Rate Auto Loans.</h1>
+      <h4>for every type of credit</h4>
+      {% comment %} <ul class="hero-ul">
+        <li>Won't affect your credit score¹</li>
+        <li>We get you a deal based on your cashflow, not credit.</li>
+      </ul> 
+      <div class="gs-container">
+        <a class="btn btn-outline-light btn-lg connect-accounts" style="border-radius: 50px;" href="{% url 'frontend:signup' %}">Search Cars&nbsp;&nbsp;<i style="position: relative;top: -1px;" class="bi-arrow-up-right-square"></i></a>
+      </div>
+      <small class="text-muted">Won't affect your credit score¹</small>
+    </div>
+  </div> {% endcomment %}
+  <!-- Modal -->
+<div class="modal signup-modal-notice fade" id="SignUpNoticeModal" tabindex="-1" aria-labelledby="SignUpNoticeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 roboto-font" id="SignUpNoticeModalLabel">  
+           <a class="navbar-brand pe-sm-3 text-dark fw-normal" href="{% url 'frontend:index' %}">
+          {% include 'frontend/components/brand/brand_text.html' %}
+          </a></h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-body-container">
+          <div class="content-wrapper">
+            <div class="mod-content-signup">
+              <h1 class="roboto-font">Fill in a few simple details that'll take <span class="bold-span">less than a minute</span>.</h1>
+              <small>- We collect these details to personalize and curate quality car recommedations.</small>
+                <div class="signup-button-container">
+                    <a type="button" class="btn roboto-font" href="{% url 'frontend:signup' %}">Search Cars&nbsp;<i style="margin-left: 5px; color: #03e2c0;" class="bi bi-arrow-right-circle-fill"></i></a>
+                   </div>
+            </div><!--mod-content-signup-->
+              </div><!--modal-body-container-->
+            </div><!--modal-body-->
+          {% comment %} <div class="mod-infographic"></div> {% endcomment %}
+        </div>
+      </div>
+      {% comment %} <div class="gradient-bottom"></div> {% endcomment %}
+    </div><!--modal-content-->
+  </div>
+</div>
+</section>
+
+<section class="desktop">
+  <div class="d-lg-flex position-relative h-90 min-vh-100">
+    <!-- Cover image-->
+    <div class="w-50 bg-size-cover bg-repeat-0 bg-position-center polygon-shape position-relative home-hero-image" style="background-image: url(https://images.unsplash.com/photo-1625870605450-40b1803df06d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3572&q=80);"></div>
+    <!-- Sign up form-->
+    <div class="hp-hero-right d-flex flex-column align-items-center w-lg-50 min-vh-100 h-100 px-3 px-lg-5 pt-5">
+      <div class="w-100 pt-5 mt-auto" style="max-width: 763px;">
+        <h1 style="" class="fw-light text-dark hero-title-desktop">Low Rate Auto Loans<br><span class="">for every type of </span><span class="text-primary">credit</span>.</h1>
+        <p class="pb-3 mb-3 mb-lg-4">We approve you for the lowest rates in the market based on your income.</p>
+        <a class="btn btn-primary btn-lg hp-search-btn connect-accounts lrg-btn" style="border-radius: 50px; line-height: 1;" href="{% url 'frontend:signup' %}">Search Cars&nbsp;&nbsp;<i class="custom-btn-icons bi-search"></i></a>
+      </div>
+      <!-- Copyright-->
+      <p class="w-100 fs-sm pt-5 mt-auto mb-5" style="max-width: 526px;"><i class="ai-lock-closed custom-btn-icons"></i> Won't affect your credit score¹</p>
+    </div>
+  </div>
+</section>
+{% comment %} <section class="container pb-5 pt-lg-3 pt-xl-4 pt-xxl-5 mt-n2 mt-md-0">
+  <p class="text-center pb-3 pb-lg-4 fw-bold text-primary pt-5">Backed by leading investors</p>
+  <br>
+  <div class="row justify-content-center row-cols-2 row-cols-3 row-cols-md-5 gx-0 gx-sm-3 gx-md-2 gx-lg-3 gx-xl-4">
+    <div class="col">
+      <div class="py-sm-2 my-xl-1"><img class="d-block d-dark-mode-none mx-auto" src="https://www.plugandplaytechcenter.com/static/assets/plug-and-play-logo-blue.451860baa333.png" width="196" alt="Clutch"><img class="d-none d-dark-mode-block mx-auto" src="assets/img/brands/clutch-rating-light.svg" width="196" alt="Clutch"></div>
+    </div>
+    <div class="col">
+      <div class="py-sm-2 my-xl-1"><img class="d-block d-dark-mode-none mx-auto" src="https://cdn.brandfolder.io/T71J6AJ4/as/q6kn4m-tw6a8-43pj0m/Techstars_Logo_Primary_Black.png" width="196" alt="Deloitte"><img class="d-none d-dark-mode-block mx-auto" src="assets/img/brands/deloitte-light.svg" width="196" alt="Deloitte"></div>
+    </div>
+    <div class="col">
+      <div class="py-sm-2 my-xl-1"><img class="d-block d-dark-mode-none mx-auto" src="https://images.crunchbase.com/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/xtqyjuydcouvfosbaqwf" width="75" alt="Deloitte"><img class="d-none d-dark-mode-block mx-auto" src="assets/img/brands/deloitte-light.svg" width="196" alt="Deloitte"></div>
+    </div>
+  </div>
+</section> {% endcomment %}
+{% endblock main %}
+
+{% block footer %}
+  <footer class="footer bg-dark dark-mode position-relative py-5">
+    <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(255, 255, 255, .02);"></div>
+    <div class="container position-relative zindex-2 pb-xl-2 pt-2 pt-sm-3 pt-xl-4 pt-xxl-5">
+      <div class="row pb-5 pt-md-3 pt-lg-4 mb-md-3 mb-lg-4">
+        <div class="col-md-6 col-xxl-5 pb-3 pb-md-0 mb-2 mb-sm-3 mb-md-0">
+          <div class="h1 pb-3">Unlock your dream car today, with Buyable.</div>
+        </div>
+        <div class="col-md-5 col-xl-4 offset-md-1 offset-xl-2 offset-xxl-3">
+          <div class="row row-cols-2">
+            <div class="col">
+              <ul class="nav flex-column pb-4 mb-2 pb-md-5 mb-lg-1">
+                {% comment %} <li class="nav-item mt-1"><a class="nav-link py-1 px-0" href="{% url 'frontend:how_it_works' %}">How it works</a></li> {% endcomment %}
+                <li class="nav-item mt-1"><a class="nav-link py-1 px-0" href="#">About us</a></li>
+                <li class="nav-item mt-1"><a class="nav-link py-1 px-0" href="{% url 'frontend:partners' %}">Partner with us</a></li>
+                {% comment %} <li class="nav-item mt-1"><a class="nav-link py-1 px-0" href="#">Privacy policy</a></li> {% endcomment %}
+                <li class="nav-item mt-1"><a class="nav-link py-1 px-0" href="{% url 'web_auth:login' %}">Login</a></li>
+              </ul>
+              <div class="d-flex"><a class="btn btn-icon btn-sm btn-secondary btn-instagram rounded-circle me-3" href="#"><i class="ai-instagram"></i></a><a class="btn btn-icon btn-sm btn-secondary btn-facebook rounded-circle me-3" href="#"><i class="ai-facebook"></i></a><a class="btn btn-icon btn-sm btn-secondary btn-youtube rounded-circle" href="#"><i class="ai-youtube"></i></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Copyright-->
+      <p class="fs-sm mb-0"><span class="opacity-70">© All rights reserved. Buyable, Inc is a </span><a class="nav-link d-inline fw-normal p-0" href="javascript:void(0)" rel="noopener">Blacksteel, LLC</a> product</p>
+    </div>
+  </footer>
+{% endblock footer %}
+
