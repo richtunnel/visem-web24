@@ -6,7 +6,7 @@ class SubdomainRedirectMiddleware:
 
     def __call__(self, request):
         host = request.get_host().split(':')[0]  # Remove port number
-        if host == "rick.visualembassy.org":
+        if 'rick.visualembassy.org' in host:
             return HttpResponseRedirect('/founder/portfolio')
         response = self.get_response(request)
         return response
