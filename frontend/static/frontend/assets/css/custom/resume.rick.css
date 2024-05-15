@@ -47,7 +47,7 @@
   position: absolute;
   background-size: cover;
   background-position: center 81%;
-  background-image: url("../../img/frs-yellow-car.jpg");
+  /* background-image: url("../../img/frs-yellow-car.jpg"); */
   background-repeat: no-repeat;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -166,7 +166,7 @@
   }
 
   .mod-infographic {
-    background-image: url("../../img/female-vector-03.png");
+    /* background-image: url("../../img/female-vector-03.png"); */
     width: 100%;
     max-width: 285px;
     height: 100%;
@@ -182,7 +182,7 @@
   .concentric-circle {
     width: 100%;
     height: 100%;
-    background-image: url("../../img/concentric-circle-03-01.svg");
+    /* background-image: url("../../img/concentric-circle-03-01.svg"); */
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
