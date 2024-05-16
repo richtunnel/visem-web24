@@ -490,6 +490,49 @@
         </div>
       </div>
     </div>
+<!--Modal Help-->
+    <div class="modal fade" id="modalHelpScreen" tabindex="-1" aria-labelledby="helpModalLabel">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header">
+           <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div id="modalBody" class="modal-body tab-content">
+            <div class="modal-logo-container" style="padding-bottom: 20px; opacity: 0.185;">
+              <img src="{% static 'frontend/assets/img/logos/visem-logo-dark.png'%}" style="max-width: 190px!important;" alt="visual embassy logo" class="header-logo">
+            </div>
+            <div id="successModal d-flex justify-content-center align-items-center h-100 w-100 text-center"></div>
+            <div id="modalTitleGroup">
+            <h2 class="hw-done">Have Questions ?</h2>
+            <p class="hw-done">Fill out this form and one of our team members will reach out to you <b>within 24 hours</b>.</p>
+            <p id="errorMessage" style="display: none;"></p>
+            </div>
+            <form class="tab-pane fade show active mt-n2" id="getStarted" autocomplete="off">
+              <div class="mb-3 mb-sm-3">
+                <label for="fullName" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="fullName" placeholder="John Doe" required>
+              </div>
+              <div class="mb-3 mb-sm-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="johndoe@example.com" required>
+              </div>
+              <div class="mb-4 d-flex flex-wrap justify-content-between">
+                <a href="https://calendly.com/rickydottech/visual-embassy-intro-pricing-product-pipeline" target="_blank" class="fs-sm">Schedule a demo instead?</a>
+              </div>
+              <button id="getStartedBtn" type="submit" class="btn btn-dark w-100">Send</button>
+            </form>
+            <hr class="border-1 bg-light" style="margin: 2rem 0rem;">
+            <div id="DiscContainer" class="disc-container">
+             <small class="text-muted">
+              At Visual Embassy, we deeply value your privacy. We pledge to maintain the confidentiality of your personal information and guarantee that your data will never be shared with any third parties. We are committed to upholding the highest standards of privacy and data protection.
+              <br><br>
+              For more detailed information, please visit our <a href="#" target="_blank">Privacy Policy.</a>
+             </small> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Page loading spinner -->
     <div class="page-loading active">
@@ -546,19 +589,19 @@
             <nav class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav navbar-nav-scroll me-auto" style="--ar-scroll-height: 520px">
                 <li class="nav-item">
-                  <a class="nav-link active" href="#">Our work</a>
+                  <a class="nav-link active" href="{% url 'frontend:coming_soon'%}" target="_blank">Our work</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link " href="https://github.com/Visual-Embassy" target="_blank" aria-expanded="false">Developer</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="components/typography.html">Templates</a>
+                  <a class="nav-link" href="{% url 'frontend:coming_soon'%}">Templates</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"  aria-expanded="false">Docs</a>
+                  <a class="nav-link" href="https://github.com/Visual-Embassy/Documentation" target="_blank"  aria-expanded="false">Docs</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="docs/getting-started.html">Contact</a>
+                  <a class="nav-link" data-bs-toggle="modal" data-bs-target="#modalHelpScreen" style="cursor:pointer">Contact</a>
                 </li>
               </ul>
               <div class="d-sm-none p-3 mt-n3 d-flex align-items-center">
@@ -1664,6 +1707,7 @@
         </div>
       </div>
     </footer>
+
 
     <!-- Back to top button -->
     <a class="btn-scroll-top" href="#top" data-scroll aria-label="Scroll back to top">
