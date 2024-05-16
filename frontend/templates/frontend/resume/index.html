@@ -9,6 +9,17 @@
         width: 46%;
       }
 
+      .usa-icon {
+        width: 100%;
+        max-width: 25px;
+        background-image: url("{% static 'frontend/assets/img/icons/usa-flag-png-xl.jpeg'%}");
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        display: flex;
+      }
+
       .general-btns {
         border-radius: 50px;
         line-height: 1;
@@ -19,6 +30,10 @@
         padding: 10px 20px;
         margin-bottom: 0.5rem;
       }
+
+      .modal-header .btn-close {
+        color: black; 
+    }
 
 @media all and (max-width: 1800px) {
     .my-photo {
