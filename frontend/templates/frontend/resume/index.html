@@ -3,21 +3,11 @@
 {% block main %}
 <style>
     .my-photo {
+        background-image: url("{% static 'frontend/assets/img/people/me2.jpg' %}");
         background-position: center !important;
         background-size: 90%;
         background-repeat: repeat-x;
         width: 46%;
-      }
-
-      .usa-icon {
-        width: 100%;
-        max-width: 25px;
-        background-image: url("{% static 'frontend/assets/img/icons/usa-flag-png-xl.jpeg'%}");
-        background-size: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        position: relative;
-        display: flex;
       }
 
       .general-btns {
@@ -33,6 +23,14 @@
 
       .modal-header .btn-close {
         color: black; 
+    }
+
+    .container {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 
 @media all and (max-width: 1800px) {
@@ -110,10 +108,10 @@
 <section class="desktop">
   <div class="d-lg-flex position-relative h-90 min-vh-100">
     <!-- Cover image-->
-    <div class="bg-size-cover bg-repeat-0 bg-position-center polygon-shape position-relative home-hero-image my-photo" style="background-image: url({% static 'frontend/assets/img/people/me2.jpg' %})"></div>
+    <div class="bg-size-cover bg-repeat-0 bg-position-center polygon-shape position-relative home-hero-image my-photo" style=""></div>
     <!-- Sign up form-->
-    <div class="hp-hero-right d-flex flex-column align-items-center w-lg-50 min-vh-100 h-100 px-3 px-lg-5 pt-5">
-      <div class="w-100 pt-5 mt-auto" style="max-width: 763px;">
+    <div class="hp-hero-right d-flex align-items-center w-lg-50 min-vh-100 h-100 px-3 px-lg-5 pt-5">
+      <div class="w-100 pt-5 mx-auto" style="max-width: 763px;">
         <h1 style="" class="fw-light text-dark hero-title-desktop">Richard Stokes</h1>
         <p class="pb-3 mb-3 mb-lg-4"> Software Engineer | Data Engineer | Product Design</p>
         <p>
