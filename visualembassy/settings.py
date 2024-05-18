@@ -62,7 +62,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'cox@vzisg5+ao$t53z^-^jx99_-*iciddbrdtwm5@fnl8$z6k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 
@@ -77,6 +77,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     "frontend.apps.FrontendConfig",
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -89,9 +90,15 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     "whitenoise.middleware.WhiteNoiseMiddleware",
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'visualembassy.urls'
+CORS_ORIGIN_ALLOW_ALL = False  # Set to False to specify origins
+CORS_ORIGIN_WHITELIST = [
+    'https://visualembassy.org',
+    'https://rick.visualembassy.org',
+]
 
 TEMPLATES = [
     {
