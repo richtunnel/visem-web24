@@ -6,7 +6,7 @@ class HomePageView(TemplateView):
      
      
 class RicksPortfolio(TemplateView):
-     template_name = "frontend/resume/index.html"
+     template_name = "frontend/pages/resume/index.html"
      
 class ComingSoon(TemplateView):
      template_name = "frontend/pages/inform/index.html"

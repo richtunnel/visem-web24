@@ -1,9 +1,8 @@
-{% extends 'frontend/resume/_base.html' %}
+{% extends 'frontend/pages/resume/_base.html' %}
 {% load static %}
 {% block main %}
 <style>
     .my-photo {
-        background-image: url("https://drive.google.com/file/d/1r3b-vBLSrn8eKM14oGH2qsaMpL00I3VB/view?usp=drive_link");
         background-position: center !important;
         background-size: 90%;
         background-repeat: repeat-x;
@@ -109,7 +108,7 @@
   <img style='width: 200px; height: 200px; display: none;' src="https://drive.google.com/file/d/1r3b-vBLSrn8eKM14oGH2qsaMpL00I3VB/view?usp=drive_link" alt="">
   <div class="d-lg-flex position-relative h-90 min-vh-100">
     <!-- Cover image-->
-    <div class="bg-size-cover bg-position-center polygon-shape position-relative my-photo"></div>
+    <div class="bg-size-cover bg-position-center polygon-shape position-relative my-photo" style="background-image: url('https://drive.google.com/file/d/1r3b-vBLSrn8eKM14oGH2qsaMpL00I3VB/view?usp=drive_link')"></div>
     <!-- Sign up form-->
     <div class="hp-hero-right d-flex align-items-center w-lg-50 min-vh-100 h-100 px-3 px-lg-5 pt-5">
       <div class="w-100 pt-0 mx-auto" style="max-width: 763px;">
