@@ -77,7 +77,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     "frontend.apps.FrontendConfig",
-    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -90,15 +89,9 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     "whitenoise.middleware.WhiteNoiseMiddleware",
-    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'visualembassy.urls'
-CORS_ORIGIN_ALLOW_ALL = False  # Set to False to specify origins
-CORS_ORIGIN_WHITELIST = [
-    'https://visualembassy.org',
-    'https://rick.visualembassy.org',
-]
 
 TEMPLATES = [
     {
