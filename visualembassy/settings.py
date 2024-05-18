@@ -167,9 +167,9 @@ APP_HOST = "http://localhost:8000"
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 STATIC_URL = "/static/"
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static/client'),
-]
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, 'static/client'),
+# ]
 MEDIA_URL = "media/"
 MEDIA_ROOT = "media/"
 STATICFILES_IGNORE_PATTERNS = [
