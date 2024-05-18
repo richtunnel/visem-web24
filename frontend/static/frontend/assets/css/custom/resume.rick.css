@@ -113,50 +113,11 @@
     background: linear-gradient(to bottom, #f2f2f2 47%, rgba(255, 255, 255, 0));
   }
 
-  #SignUpNoticeModalLabel.btn-close {
-    color: #d7d7d7 !important;
-  }
-
   .content-wrapper {
     height: 65vh;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-  .bi-arrow-right-circle-fill::before {
-    vertical-align: unset !important;
-  }
-
-  .gradient-bottom {
-    position: absolute;
-    width: 100%;
-    height: 50vh;
-    bottom: 0;
-    padding: 0;
-    margin: 0 auto;
-    background-size: 100% 100%;
-    background-position: 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
-    background-image: radial-gradient(49% 81% at 45% 47%, #ffffffff 0%, #073aff00 100%), conic-gradient(from 0deg at 17% -2%, #ffffffff 0%, #ff000000 99%),
-      radial-gradient(142% 91% at 83% 7%, #ffffffdb 1%, #ff000000 99%), linear-gradient(0deg, #7e8affa3 -3%, #ff000000 99%), linear-gradient(344deg, #00ffff8c -7%, #00ffff8c 0%, #ffffff 100%);
-  }
-
-  .my-photo {
-    background-position: center !important;
-    background-size: 79% !important;
-    background-repeat: repeat;
-  }
-
-  .mod-content-signup small {
-    text-align: left;
-    width: 100%;
-  }
-
-  .mod-content-signup h1 {
-    font-size: calc(6.5vw - 0.025rem);
-    line-height: 1.2;
-    opacity: 0.98;
-    font-weight: 300;
   }
 
   .main-header-logo {
@@ -168,59 +129,6 @@
 
   .icon-gradient {
     opacity: 0.9;
-  }
-
-  .mod-infographic {
-    width: 100%;
-    max-width: 285px;
-    height: 100%;
-    background-size: contain;
-    background-position: bottom;
-    background-repeat: no-repeat;
-    position: absolute;
-    bottom: -28px;
-    left: -40px;
-    z-index: 5;
-  }
-
-  .concentric-circle {
-    width: 100%;
-    height: 100%;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: absolute;
-  }
-
-  .signup-button-container {
-    width: 100%;
-    height: 150px;
-    display: flex;
-    float: right;
-    right: 0%;
-    top: 10%;
-    position: relative;
-    justify-content: right;
-    align-items: center;
-    z-index: 5;
-  }
-
-  .signup-button-container a {
-    width: 100%;
-    max-width: 230px;
-    padding: 16px 0px;
-    border-radius: 50px;
-    cursor: pointer;
-    background: #000;
-    color: #fff;
-    text-decoration: none;
-    font-size: calc(0.9em + 1.5vw);
-    text-transform: capitalize;
-    font-family: "Roboto", sans-serif !important;
-  }
-
-  .signup-button-container a:hover {
-    border: 2px solid #000;
   }
 
   .start-line {
@@ -394,25 +302,6 @@
 
   /** END **/
 
-  /* .navbar-collapse.show {
-      position: absolute;
-      width: 100%;
-      left: 0;
-      right: 0;
-      top: 0;
-      height: 57vh;
-      display: inline-grid;
-    }
-  
-    .navbar-collapse {
-      border-top: none !important;
-    } */
-
-  .connect-accounts {
-    background: #000 !important;
-    color: #fff !important;
-  }
-
   header {
     background: #fff;
     padding: 0 !important;
@@ -450,21 +339,6 @@
     background-color: #000 !important;
   }
 
-  .blur-section {
-    height: 48.5%;
-    width: 100%;
-    padding: 10px 15px;
-    z-index: 9;
-    position: absolute;
-    bottom: 0;
-    backdrop-filter: blur(5px);
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    background-color: rgba(255, 255, 255, 0.85);
-    display: flex;
-    align-items: center;
-  }
-
   .blur-section-container h1 {
     text-align: left;
     width: 75%;
@@ -473,19 +347,6 @@
     line-height: 1.05;
     font-weight: 700;
   }
-
-  header p {
-    font-family: "Myriad Pro Regular", "-apple-system";
-  }
-
-  /* .oversub-head {
-      background: #5100cb;
-      background: linear-gradient(to right, #5100cb 0%, #1d6f93 50%, #00bbdc 100%);
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      font-size: inherit !important;
-    } */
 
   .oversub-head {
     background: linear-gradient(to right, #d49637 0%, #303030 50%, #111111 100%);
@@ -717,21 +578,6 @@
   .sub-title-02 {
     font-size: calc(0.485rem + 1.5vw);
   }
-
-  /* .mobile-overlay {
-      height: 50vh;
-      width: 100%;
-      padding: 0;
-      margin: 0 auto;
-      background-position: bottom;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-blend-mode: lighten;
-      position: absolute;
-      bottom: 0;
-      z-index: -1;
-      opacity: 0.03;
-    } */
 }
 
 @media all and (max-width: 380px) {
@@ -789,20 +635,6 @@
 
   .mod-content-signup h1 {
     font-size: 1.25rem !important;
-  }
-
-  .mod-content-signup {
-    height: 43vh;
-    margin-bottom: 10px;
-  }
-
-  .mod-infographic {
-    max-width: 185px;
-  }
-
-  .signup-button-wrapper {
-    width: 80px;
-    height: 80.05px;
   }
 
   .modal-body {
@@ -863,15 +695,5 @@
 
   .start-btn a {
     font-size: 0.75rem;
-  }
-
-  .center-text::before {
-    top: 25%;
-  }
-}
-
-@media all and (max-width: 280px) {
-  .center-text::before {
-    top: 2%;
   }
 }
