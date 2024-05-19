@@ -9,9 +9,6 @@ urls = [
     path("admin/", admin.site.urls),
     #path("api/", include("backend.urls")),
     # User management
-    # Buyable frontends
-    # Dealership frontends
-
     # Landing page, partner page, privacy policy pages, and etc.
     path("", include( "frontend.urls", namespace="frontend")),
     
