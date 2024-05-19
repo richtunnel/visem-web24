@@ -62,7 +62,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'cox@vzisg5+ao$t53z^-^jx99_-*iciddbrdtwm5@fnl8$z6k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
@@ -167,7 +167,6 @@ APP_HOST = "http://localhost:8000"
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 STATIC_URL = "/static/"
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-#STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 # STATICFILES_DIRS = [
 #     os.path.join(BASE_DIR, 'static/client'),
 # ]
